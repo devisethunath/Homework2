@@ -50,14 +50,14 @@ public class MethodOverloadingHW {
 		double wid=3.7;
 		double result =area(len,wid);
 
-		System.out.println(result);
+		System.out.println("\nArea of Rectangle with length and width  (" +len +", "+ wid +") is " +result);
 
 		//Area of Circle
 
 		double rad=5.8;
 		double result1=area(rad);
 
-		System.out.println(result1);
+		System.out.println("\nArea of the circle with radius "+rad +" is "+result1);
 
 		//Equality of strings
 
@@ -65,7 +65,7 @@ public class MethodOverloadingHW {
 		String string2="java";
 
 		boolean result2=equal(string1,string2);
-		System.out.println(result2);
+		System.out.println("\nAre the strings same : "+result2);
 
 		//Equality of integers
 
@@ -73,7 +73,7 @@ public class MethodOverloadingHW {
 		int int2=12;
 
 		boolean result3=equal(int1,int2);
-		System.out.print(result3);
+		System.out.print("\nAre the integers Equal : "+result3);
 
 	}
 

@@ -1,11 +1,16 @@
 package homework;
 
+
+
 public class BoxDemo {
 	
 	double val;
 
 
 	public static void main(String[] args) {
+		
+		
+	
 		Box obj= new Box();
 		Box obj1=new Box(10.5);
 		Box obj2=new Box(10,13,11);
@@ -17,9 +22,9 @@ public class BoxDemo {
 
 
 
-		System.out.println(val1);
-		System.out.println(val2);
-		System.out.println(val3);
+		System.out.println("Initial volume " +val1);
+		System.out.println("Volume of Cube with side 10.5 is " +val2);
+		System.out.println("Volume of the Box with length=10 , width=13, height=11 is "+val3);
 
 	}}
 

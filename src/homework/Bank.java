@@ -1,34 +1,48 @@
 package homework;
 
+import java.util.Scanner;
+
 public class Bank {
 
 	public static void main(String[] args) {
 
+		//Scanner for UserInput
 
-		Account obj=new Account();//Create Object
+		Scanner myObj= new Scanner(System.in);
+		System.out.println("Enter Deposit amount :   ");
+		Double userInput= myObj.nextDouble();
 
 
-		//Depositing money
+		//Create Object
+		Account obj=new Account();
 
 
-		double deposit=obj.deposit(10000);
+		double deposit=obj.deposit(userInput);
 
 		double bal1=obj.accountBalance(deposit);
 
-		System.out.println("Account balance after deposit is   "+bal1+" $");
+		System.out.println("\nAccount balance after deposit is   "+bal1+" $");
 
 		//Withdrawing money
 
-		boolean status=obj.withdraw(3000);
+
+		Scanner myObj1= new Scanner(System.in);
+		System.out.println("\nEnter Withdrawal  Amount:   ");
+		Double userInput1= myObj1.nextDouble();
+
+		boolean status=obj.withdraw(userInput1);
 
 		if (status==false)
 
 		{
-			System.out.println("balance is in sufficient to withdraw the requested amount");
+			System.out.println("Balance is insufficient to withdraw the requested amount");
 		}
-	}
 
-}
+		//Close Inputs
+		myObj.close();
+		myObj1.close();
+
+	}}
 
 class Account {
 
@@ -59,7 +73,7 @@ class Account {
 	{
 		double wit=w;
 
-		boolean value=(balance>wit);
+		boolean value=(balance>=wit);
 
 		if (value==true)
 		{balance= balance-wit;
